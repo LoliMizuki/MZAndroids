@@ -1,6 +1,8 @@
-package com.lolimizuki.mzandroids
+package com.lolimizuki.mzandroids.typs
 
 import android.text.Editable
+
+fun String.Companion.test() = "Google SUCKs"
 
 fun String.ediable(): Editable {
     return Editable.Factory.getInstance().newEditable(this)

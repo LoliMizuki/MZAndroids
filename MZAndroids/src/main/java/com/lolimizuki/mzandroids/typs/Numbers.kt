@@ -1,4 +1,4 @@
-package com.lolimizuki.mzandroids
+package com.lolimizuki.mzandroids.typs
 
 import android.icu.text.NumberFormat
 import java.text.DecimalFormat
