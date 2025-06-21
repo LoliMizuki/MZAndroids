@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MZ"
 include(":app")
- 
+include(":MZAndroids")

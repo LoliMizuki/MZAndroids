@@ -1,4 +1,4 @@
-package com.lolimizuki.mz
+package com.lolimizuki.mzandroids
 
 import android.text.Editable
 
