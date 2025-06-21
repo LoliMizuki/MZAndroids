@@ -1,21 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    `maven-publish`
-}
-
-publishing {
-    publications {
-        create("release", MavenPublication::class) {
-            groupId = "com.github.LoliMizuki"
-            artifactId = "MZAndroids"
-            version = "0.0.6"
-
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
 }
 
 android {
@@ -47,13 +32,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
-    }
-
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
     }
 }
 
