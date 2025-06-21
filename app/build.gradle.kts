@@ -7,9 +7,9 @@ plugins {
 publishing {
     publications {
         create("release", MavenPublication::class) {
-            groupId = "com.github.lolimizuki"
+            groupId = "com.github.LoliMizuki"
             artifactId = "MZAndroids"
-            version = "0.0.1"
+            version = "0.0.6"
 
             afterEvaluate {
                 from(components["release"])
