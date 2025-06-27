@@ -20,7 +20,7 @@ publishing {
 
 android {
     namespace = "com.lolimizuki.mzandroids"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 28
