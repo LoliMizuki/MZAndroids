@@ -1,17 +1,16 @@
 package com.lolimizuki.mzandroids.typs
 
 import android.text.Editable
-
-fun String.Companion.test() = "Google SUCKs"
+import java.math.BigInteger
+import java.security.MessageDigest
 
 fun String.ediable(): Editable {
     return Editable.Factory.getInstance().newEditable(this)
 }
 
-object StringsHelp {
-
-    @JvmStatic
-    fun ediable(string: String): Editable {
-        return string.ediable()
-    }
+fun String.md5(): String {
+    val md = MessageDigest.getInstance("MD5")
+    return BigInteger(1, md.digest(toByteArray()))
+        .toString(16)
+        .padStart(32, '0')
 }
