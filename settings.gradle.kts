@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MZ"
+rootProject.name = "MZAndroids"
 include(":app")
 include(":MZAndroids")
