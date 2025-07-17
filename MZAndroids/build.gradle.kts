@@ -1,3 +1,6 @@
+val version = "0.0.8"
+
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -9,7 +12,7 @@ publishing {
         create("release", MavenPublication::class) {
             groupId = "com.github.LoliMizuki"
             artifactId = "MZAndroids"
-            version = "0.0.7"
+            version = version
 
             afterEvaluate {
                 from(components["release"])
@@ -42,10 +45,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        // ⭐️ DON'T remove even deprecated, will unable to build. gradle SUCKs
-        @Suppress("DEPRECATION")
-        jvmTarget = "17"
+
+    kotlin {
+        jvmToolchain(17)
     }
 
     publishing { // Add this
