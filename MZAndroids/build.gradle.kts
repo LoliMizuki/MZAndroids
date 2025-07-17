@@ -39,11 +39,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        // ⭐️ DON'T remove even deprecated, will unable to build. gradle SUCKs
+        @Suppress("DEPRECATION")
+        jvmTarget = "17"
     }
 
     publishing { // Add this
